@@ -1,18 +1,33 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app">
-      <h1>Tournoi</h1>
-      <p>Tournoi est une application pour créer un tableau de rencontres et de classement</p>
-      <p>Pour commencer entrer le nombre d'équipe :</p>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tournoi</title>
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <div id="app">
+    <h1>Tournoi</h1>
+    <p>Tournoi est une application pour créer un tableau de rencontres et de classement d'équipes.</p>
+    <p>Pour commencer, entrez le nombre d'équipes :</p>
+    <form>
       <input type="number">
-    </div>
-    <script type="module" src="/main.js"></script>
-  </body>
+      <button>C'est parti !</button>
+      <p class="msgError">Vous devez mettre au moins 3 équipes</p>
+    </form>
+
+
+  </div>
+  <script type="module" src="/main.js"></script>
+</body>
+
 </html>

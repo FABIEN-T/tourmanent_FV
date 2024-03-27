@@ -70,7 +70,7 @@ button:hover {
 }
 
 .inputTeamsContainer {
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   /* place-items: center; */
@@ -91,3 +91,22 @@ button:hover {
 /* .btnPutTeams {
   display: none;
 } */
+
+.formResults {
+  /* display: none; */
+  background: #7f7400;
+}
+
+.formResults p {
+  margin: 5px 0;
+}
+
+.formResults label {
+  margin: 0;
+}
+
+.formResults input {
+  width: 30px;
+  height: 10px;
+  margin-inline: 2px;
+}

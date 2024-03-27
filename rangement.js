@@ -212,7 +212,36 @@ function showMatchTables(matchTables) {
 
 
 
+  `<!-- <div class="inputTeamsContainer">
+        <button class="btnPutTeams">Créer les tableaux de rencontres</button>
+      </div> -->
+      <!-- <div class="day">
+        <form class="formDay">
+          <p>Journée 1</p>
+          <div class="match">
+            <label for="score1">a</label>
+            <input type="number" id="score1">
+            <input type="number" id="score1">
+            <label for="score2">b</label>
+          </div>
+          <div class="match">
+            <label for="score1">c</label>
+            <input type="number" id="score1">
+            <input type="number" id="score1">
+            <label for="score2">d</label>
+          </div>
+      </div> --></input>`
 
+      function scoreRecovery() {
+        // const scores = document.querySelector(".formResults")
+        const scoresInputs = [...document.querySelectorAll(".match input[type=text]")]
+        // console.log(scoresInputs);
+        scoresInputs.map(scoresInputs => scoresInputs.addEventListener("input", handleScores))
+      }
+      
+      function handleScores(e) {
+        console.log("score", input.value);
+      }
 
 
 

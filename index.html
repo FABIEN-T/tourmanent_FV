@@ -17,46 +17,71 @@
 <body>
   <div id="app">
     <h1>Tournoi</h1>
-    <p>Tournoi est une application pour générer un tableau de rencontres et de classement d'équipes.</p>
+    <p class="explanation">Tournoi est une application qui génère un tableau de rencontres et de classement d'équipes.
+    </p>
 
-    <form class="formNumberOfTeams">
-      <div class="inputContainer">
-        <label for="PushNumberofTeams">Pour commencer, entrez le nombre d'équipes :</label>
-        <input type="number" id="PushNumberofTeams">
-        <button class="btnNumberOfTeams">C'est parti !</button>
-        <p class="msgError">Vous devez mettre au moins 3 équipes</p>
-      </div>
-    </form>
+    <div class="container">
+      <form class="formNumberOfTeams">
+        <div class="inputContainer">
+          <label for="pushNumberofTeams">Pour commencer, entrez le nombre d'équipes :</label>
+          <input type="number" id="pushNumberofTeams">
+          <button class="btnNumberOfTeams">C'est parti !</button>
+          <p class="msgError">Vous devez mettre au moins 3 équipes.</p>
+        </div>
+      </form>
 
-    <form class="formPutTeams">
-      <div class="inputTeamsContainer">
-        <!-- <button class="btnPutTeams">Créer les tableaux de rencontres</button> -->
-      </div>
+      <form class="formPutTeams">
+        <div class="inputTeamsContainer">
+          <p>Saisissez le nom des équipes</p>
+          <!-- <button class="btnPutTeams">Créer les tableaux de rencontres</button> -->
+        </div>
 
-    </form>
+      </form>
 
-    <form class="formResults">
-      <!-- <div class="inputTeamsContainer">
-        <button class="btnPutTeams">Créer les tableaux de rencontres</button>
+      <form class="formResults">
+        <p class="title">RESULTATS</p>
+      </form>
+
+      <!-- <div class="ranking">
+        <table>
+          <caption>
+            Classement
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col">Equipe</th>
+              <th scope="col">pts</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>a</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>b</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>c</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <th scope="row">4</th>
+              <td>d</td>
+              <td>0</td>
+            </tr>
+          </tbody>
+        </table>
+
       </div> -->
-      <!-- <div class="day">
-        <form class="formDay">
-          <p>Journée 1</p>
-          <div class="match">
-            <label for="score1">a</label>
-            <input type="number" id="score1">
-            <input type="number" id="score1">
-            <label for="score2">b</label>
-          </div>
-          <div class="match">
-            <label for="score1">c</label>
-            <input type="number" id="score1">
-            <input type="number" id="score1">
-            <label for="score2">d</label>
-          </div>
-      </div> -->
+    </div>
 
-    </form>
+
 
   </div>
   <script type="module" src="/main.js"></script>

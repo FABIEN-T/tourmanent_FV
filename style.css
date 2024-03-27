@@ -1,12 +1,11 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+:root {  
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
+  background: linear-gradient(90deg, #1b2938, #325577);
+  /* background-color: #2b4967; */
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -14,78 +13,123 @@
 }
 
 body {
+  font-family: Raleway, Helvetica, Arial, sans-serif;
   margin: 0;
-  display: flex;
-  place-items: center;
+  /* display: flex; */
+  /* place-items: center; */
   min-width: 320px;
   min-height: 100vh;
 }
 
 
 #app {
-  max-width: 1280px;
-  margin: -30% auto 0;
+  max-width: 768px;
+  margin: 0 auto 0;
   padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
-  background: rgb(43, 73, 103);
+  /* background: pink; */
   border-radius: 5px;
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  margin: 10px auto 20px;
 }
 
-p {
-  font-size: 20px;
+.explanation {
+  font-size: 24px;
+  margin: 0 auto 30px;
 }
 
 .inputContainer {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   place-items: center;
+  padding: 20px;
+  background: #1b2938;
+  border-radius: 5px;
+  box-shadow: 5px 8px 5px rgba(0, 0, 0, 0.1);
 }
 
-input {  
+.formNumberOfTeam {
+  margin: 0 auto;
+}
+
+.inputContainer label {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.inputContainer input {  
   padding: 10px;
+  width: 40px;
   border-radius: 5px;
 }
 
 button {
+  font-size: 18px;
   width: fit-content;
-  margin-top: 10px;
-  padding: 10px;
-  background: #865a0e;
+  margin: 20px auto 0;
+  padding: 15px;
+  background: #324b67;
   border: none;
   border-radius: 5px;
   cursor: pointer
 }
 button:hover {
-  background: #95876e;
+  background: #4d759f;
 }
 
 .msgError {
+  font-size: 20px;
+  font-weight: 600;
   display: none;
-  color: crimson;
+  color: #f1f1f1;
+  border-radius: 5px;
 }
 
 .inputTeamsContainer {
   display: none;
   flex-direction: column;
   align-items: center;
+  /* font-size: Lato, sans-serif; */
   /* place-items: center; */
-  margin-top: 10px;
-  padding: 10px;
-  background: #0b6328;
+  /* margin-top: 10px; */
+  padding: 20px;
+  border-radius: 5px;
+  background: #1b2938;
+  box-shadow: 5px 8px 5px rgba(0, 0, 0, 0.1);
+}
+
+.inputTeamsContainer p {
+  font-size: 20px;
+  /* font-weight: 600; */
+  margin: 0 auto 10px;
 }
 
 .divInputTeam {
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
 .divInputTeam p {
-  margin-right: 10px;
+  display: inline-block;
+  width: 100px;
+  font-size: 20px;
+  margin: 10px 5px 10px 10px;
+}
+
+.inputTeam {  
+  font-size: 20px;
+  height: 20px;
+  margin: 10px 0;
+  padding-left: 5px;
 }
 
 /* .btnPutTeams {
@@ -93,20 +137,74 @@ button:hover {
 } */
 
 .formResults {
-  /* display: none; */
-  background: #7f7400;
+  display: none;
+  padding: 20px;
+  border-radius: 5px;
+  background: #1b2938;  
+  box-shadow: 5px 8px 5px rgba(0, 0, 0, 0.1);
 }
 
-.formResults p {
-  margin: 5px 0;
+.formResults .title {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0px auto 20px;
 }
 
 .formResults label {
+  display: inline-block;
+  text-align: center;
+  width: 150px;
   margin: 0;
+  /* background: rgb(92, 69, 73); */
+  background: hwb(39 17% 64%);
+  border-radius: 5px;
 }
 
+/* .formResults label:nth-child(2n) {
+  text-align: right;
+} */
+
+/* .formResults label:nth-child(2n+1) {
+  text-align: left;
+} */
+
 .formResults input {
+  font-size: 20px;
+  height: 20px;
   width: 30px;
-  height: 10px;
-  margin-inline: 2px;
+  margin: 0;
+  padding-left: 5px;
+}
+
+.btnScores {  
+  margin-bottom: 15px;
+}
+
+.day {
+  /* display: flex;
+  flex-direction: row; */
+  font-size: 20px;
+}
+
+.match:nth-child(2n+1) {
+  /* display: flex;
+  flex-direction: row; */
+  margin-bottom: 10px;
+}
+
+.match:nth-child(2n) {
+  /* display: flex;
+  flex-direction: row; */
+  margin-bottom: 30px;
+}
+
+.match p {
+  margin-bottom: 5px;
+}
+
+.ranking {
+  align-items: center;
+  margin-top: 20px;
+  background: #1b2938;
+  align-self: center;
 }

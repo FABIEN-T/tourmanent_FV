@@ -246,7 +246,68 @@ function showMatchTables(matchTables) {
 
 
 
+// Affichage des tableaux de rencontres
+function showMatchTables(matchTables) {
+  const formPutTeams = document.querySelector('.formPutTeams')
+  formPutTeams.style.display = "none"
+  formPutTeams.removeEventListener("submit", handleTeams)
+
+  const formResults = document.querySelector('.formResults')
+  formResults.style.display = "block"
+  // console.log("SHOW", matchTables)
+
+  // const title = document.createElement('p')
+  // title.textContent = "RESULTATS"
+  // formResults.appendChild(title)
+
+  const day = document.createElement('div')
+  day.classList.add('day')
+    
+  let dayNumberTitle = 1 
+  for (let j = 0; j < matchTables.length; j++) { 
+    // console.log("matchTables", matchTables[j][0], matchTables[j][1])
+    const match = document.createElement('div')
+    match.classList.add('match')
+    // console.log("%", j, j % 2)      
+    
+    // ${j%2 === 0 ? `<p>Rencontre n°${dayNumberTitle}</p>` : ``}
+    match.innerHTML = `
+      
+      <label for="scoreA${j}">${matchTables[j][0]}</label>
+      <input type="text" id="scoreA${j}">
+      <input type="text" id="scoreB${j}">
+      <label for="scoreB${j}">${matchTables[j][1]}</label>      
+    `
+    // j % 2 === 0 && dayNumberTitle++
+    
+    day.appendChild(match)
+  }
+  
+  const btnScores = document.createElement("button")
+  btnScores.setAttribute("type", "submit")
+  btnScores.classList.add("btnScores")   
+  btnScores.textContent = "Calcul pour le classement"
+  day.appendChild(btnScores)  
+  formResults.appendChild(day) 
+
+  formResults.addEventListener("submit", handleScores) 
+}
 
 
 
- 
+function creationOfDatingTables2(teamsArray) {
+  
+  let allMatchsArray = []
+  // console.log("teamsArray", teamsArray);
+  
+  for (let i = 0; i < teamsArray.length; i++) {
+    for (let j = i + 1; j < teamsArray.length; j++) {
+      let matchArray = []
+      console.log(i, teamsArray[i], j, teamsArray[j])
+      matchArray.push(teamsArray[i])
+      matchArray.push(teamsArray[j])
+      allMatchsArray.push(matchArray)
+    }
+  }
+  console.log("rencontres", allMatchsArray)
+}

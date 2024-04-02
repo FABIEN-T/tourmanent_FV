@@ -186,20 +186,26 @@ button:hover {
   font-size: 20px;
 }
 
-.match:nth-child(2n+1) {
+.day .meet {
+  margin-bottom: 0;
+}
+
+.match {
   /* display: flex;
   flex-direction: row; */
   margin-bottom: 10px;
 }
 
-.match:nth-child(2n) {
-  /* display: flex;
-  flex-direction: row; */
+/* .match:nth-child(2n) {
   margin-bottom: 30px;
-}
+} */
 
-.match p {
+/* .match p {
   margin-bottom: 5px;
+} */
+
+.day .exempt {
+  margin: -10px 0 0;
 }
 
 .ranking {
